@@ -1,0 +1,42 @@
+[0.222s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/src/my_chatter_msgs -DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs
+[1.074s] -- The C compiler identification is GNU 11.4.0
+[1.215s] -- The CXX compiler identification is GNU 11.4.0
+[1.233s] -- Detecting C compiler ABI info
+[1.398s] -- Detecting C compiler ABI info - done
+[1.408s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.409s] -- Detecting C compile features
+[1.410s] -- Detecting C compile features - done
+[1.423s] -- Detecting CXX compiler ABI info
+[1.639s] -- Detecting CXX compiler ABI info - done
+[1.660s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.666s] -- Detecting CXX compile features
+[1.667s] -- Detecting CXX compile features - done
+[1.699s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.937s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.092s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.249s] -- Added test 'lint_cmake' to check CMake code style
+[2.269s] -- Added test 'xmllint' to check XML markup files
+[2.303s] -- Configuring done
+[2.390s] -- Generating done
+[2.431s] -- Build files have been written to: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs
+[2.438s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/src/my_chatter_msgs -DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs
+[2.444s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[2.548s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[2.573s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs
+[2.592s] -- Install configuration: ""
+[2.599s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/package_run_dependencies/my_chatter_msgs
+[2.610s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/parent_prefix_path/my_chatter_msgs
+[2.623s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.sh
+[2.629s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.dsv
+[2.636s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.sh
+[2.642s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.dsv
+[2.649s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.bash
+[2.658s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.sh
+[2.667s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.zsh
+[2.674s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.dsv
+[2.680s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.dsv
+[2.690s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/packages/my_chatter_msgs
+[2.699s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig.cmake
+[2.706s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig-version.cmake
+[2.713s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.xml
+[2.725s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs

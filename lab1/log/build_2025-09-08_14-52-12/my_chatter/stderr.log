@@ -1,0 +1,5 @@
+  File "/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages/my_chatter/subscriber.py", line 35
+    self.get_logger().info(f" 
+                           ^
+SyntaxError: unterminated string literal (detected at line 35)
+

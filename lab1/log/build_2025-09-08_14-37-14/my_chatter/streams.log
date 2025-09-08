@@ -1,0 +1,44 @@
+[0.266s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/chatter:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/src/my_chatter -DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter
+[0.407s] -- The C compiler identification is GNU 11.4.0
+[0.493s] -- The CXX compiler identification is GNU 11.4.0
+[0.513s] -- Detecting C compiler ABI info
+[0.691s] -- Detecting C compiler ABI info - done
+[0.702s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.703s] -- Detecting C compile features
+[0.703s] -- Detecting C compile features - done
+[0.714s] -- Detecting CXX compiler ABI info
+[0.917s] -- Detecting CXX compiler ABI info - done
+[0.935s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.935s] -- Detecting CXX compile features
+[0.936s] -- Detecting CXX compile features - done
+[0.953s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.172s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.454s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.653s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.661s] -- Added test 'lint_cmake' to check CMake code style
+[1.667s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.682s] -- Added test 'xmllint' to check XML markup files
+[1.710s] -- Configuring done
+[1.795s] -- Generating done
+[1.838s] -- Build files have been written to: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter
+[1.845s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/chatter:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/src/my_chatter -DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter
+[1.850s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/chatter:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter -- -j32 -l32
+[1.960s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/chatter:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter -- -j32 -l32
+[1.966s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/chatter:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter
+[1.984s] -- Install configuration: ""
+[1.991s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/ament_index/resource_index/package_run_dependencies/my_chatter
+[2.001s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/ament_index/resource_index/parent_prefix_path/my_chatter
+[2.015s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/environment/ament_prefix_path.sh
+[2.020s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/environment/ament_prefix_path.dsv
+[2.026s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/environment/path.sh
+[2.031s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/environment/path.dsv
+[2.037s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/local_setup.bash
+[2.043s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/local_setup.sh
+[2.049s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/local_setup.zsh
+[2.055s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/local_setup.dsv
+[2.061s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/package.dsv
+[2.072s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/ament_index/resource_index/packages/my_chatter
+[2.081s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/cmake/my_chatterConfig.cmake
+[2.088s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/cmake/my_chatterConfig-version.cmake
+[2.096s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter/share/my_chatter/package.xml
+[2.106s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/chatter:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter

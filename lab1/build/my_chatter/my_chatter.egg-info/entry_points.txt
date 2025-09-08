@@ -1,0 +1,4 @@
+[console_scripts]
+listener = my_chatter.subscriber:main
+talker = my_chatter.publisher:main
+

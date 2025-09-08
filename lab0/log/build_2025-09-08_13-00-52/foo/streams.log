@@ -1,0 +1,20 @@
+[0.826s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/src/foo': PS1=\h [\!] \w # PYTHONPATH=/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/build/foo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/install/foo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/foo build --build-base /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/build/foo/build install --record /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/build/foo/install.log --single-version-externally-managed install_data
+[1.031s] running egg_info
+[1.032s] writing ../../build/foo/foo.egg-info/PKG-INFO
+[1.034s] writing dependency_links to ../../build/foo/foo.egg-info/dependency_links.txt
+[1.037s] writing entry points to ../../build/foo/foo.egg-info/entry_points.txt
+[1.039s] writing requirements to ../../build/foo/foo.egg-info/requires.txt
+[1.043s] writing top-level names to ../../build/foo/foo.egg-info/top_level.txt
+[1.050s] reading manifest file '../../build/foo/foo.egg-info/SOURCES.txt'
+[1.055s] writing manifest file '../../build/foo/foo.egg-info/SOURCES.txt'
+[1.057s] running build
+[1.057s] running build_py
+[1.059s] running install
+[1.060s] running install_lib
+[1.066s] running install_data
+[1.068s] running install_egg_info
+[1.071s] removing '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/install/foo/lib/python3.10/site-packages/foo-0.0.0-py3.10.egg-info' (and everything under it)
+[1.079s] Copying ../../build/foo/foo.egg-info to /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/install/foo/lib/python3.10/site-packages/foo-0.0.0-py3.10.egg-info
+[1.124s] running install_scripts
+[1.156s] writing list of installed files to '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/build/foo/install.log'
+[1.171s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/src/foo' returned '0': PS1=\h [\!] \w # PYTHONPATH=/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/build/foo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/install/foo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/foo build --build-base /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/build/foo/build install --record /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab0/build/foo/install.log --single-version-externally-managed install_data

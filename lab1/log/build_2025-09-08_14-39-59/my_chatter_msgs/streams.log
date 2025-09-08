@@ -1,0 +1,20 @@
+[0.221s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[0.300s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --build /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[0.305s] Invoking command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs
+[0.314s] -- Install configuration: ""
+[0.316s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/package_run_dependencies/my_chatter_msgs
+[0.317s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/parent_prefix_path/my_chatter_msgs
+[0.318s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.sh
+[0.319s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.dsv
+[0.320s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.sh
+[0.321s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.dsv
+[0.322s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.bash
+[0.323s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.sh
+[0.324s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.zsh
+[0.326s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.dsv
+[0.326s] -- Installing: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.dsv
+[0.334s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/packages/my_chatter_msgs
+[0.336s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig.cmake
+[0.336s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig-version.cmake
+[0.337s] -- Up-to-date: /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.xml
+[0.400s] Invoked command in '/home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble PS1=\h [\!] \w # /usr/bin/cmake --install /home/cc/ee106a/fa25/class/ee106a-abw/ros_workspaces/lab1/build/my_chatter_msgs
