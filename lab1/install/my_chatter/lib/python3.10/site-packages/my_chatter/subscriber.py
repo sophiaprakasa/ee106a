@@ -25,7 +25,7 @@ class MinimalSubscriber(Node):
         super().__init__('minimal_subscriber')
         self.subscription = self.create_subscription(
             TimestampString,
-            'user_input',
+            'user_messages',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning

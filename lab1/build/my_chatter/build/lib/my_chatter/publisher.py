@@ -30,12 +30,11 @@ class MinimalPublisher(Node):
         super().__init__('minimal_publisher')
         
          # Here, we set that the node publishes message of type String (where did this type come from?), over a topic called "chatter_talk", and with queue size 10. The queue size limits the amount of queued messages if a subscriber doesn't receive them quickly enough.
-        self.publisher_ = self.create_publisher(TimestampString, 'chatter_talk', 10)
+        self.publisher_ = self.create_publisher(TimestampString, 'user_messages', 10)
         
         # We create a timer with a callback (a function that runs automatically when something happens so you don't have to constantly check if something has happened) 
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
-        # self.i = 0
     
     # Here we create a message with the counter value appended and publish it
     def timer_callback(self):
@@ -53,22 +52,10 @@ class MinimalPublisher(Node):
 def main(args=None):
     # Initialize the rclpy library
     rclpy.init(args=args)
-    print("Here")
     # Create the node
     minimal_publisher = MinimalPublisher()
     # Spin the node so its callbacks are called
     rclpy.spin(minimal_publisher)
-    # print("in main")
-    # while rclpy.ok(): 
-    #     line = input("Please enter a line of text and press <Enter>")
-    #     msg = TimestampString()
-    #     msg.input = line
-    #     msg.time = int(node.get_clock().now().nanseconds)
-
-    #     self.publisher_.publish(msg)
-    #     self.get_logger().info('Publishing: "%s"' % msg.data)
-    # timer_callback()
-
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
