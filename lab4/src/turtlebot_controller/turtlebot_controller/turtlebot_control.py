@@ -18,6 +18,11 @@ class TurtleBotController(Node):
         self.turtle_frame = frame1
         self.ar_frame = frame2
 
+        self.x = self.turtle_frame[0]
+        self.y = self.turtle_frame[1]
+        self.xd = self.ar_frame[0]
+        self.yd = self.ar_frame[1]
+
         # Note: these constants might not work for your turtlebot, be willing to tune them if it isn't reaching the goal!
         self.K1 = 0.3
         self.K2 = 1.0
@@ -25,7 +30,7 @@ class TurtleBotController(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
-        self.pub = self.create_publisher(Twist, 'INSERT TOPIC HERE', 10)
+        self.pub = self.create_publisher(Twist, '/cmd_vel', 10)
         self.timer = self.create_timer(0.1, self.loop)
 
         self.get_logger().info(
@@ -35,9 +40,36 @@ class TurtleBotController(Node):
 
     def loop(self):
         try:
-            tf = self.tf_buffer.lookup_transform('INSERT_FRAME_HERE', 'INSERT_FRAME_HERE', Time())
+            tf = self.tf_buffer.lookup_transform(self.turtle_frame, self.ar_frame, Time())
+            """
+Transformed stamped --> 
+Header header
+string child_frame_id # the frame id of the child frame
+Transform transform
 
-            control_cmd = # Generate this
+
+Transform --> 
+Vector3 translation
+Quaternion rotation
+
+Twist --> 
+Vector3 linear
+Vector3 angular
+
+
+            """
+            print(tf.transform.translation)
+            leftMatrix = np.array([[self.K1, 0],
+                                   [0, self.K2]])
+            rightMatrix = np.array([[tf.transform.translation.x],
+                                    [tf.transform.translation.y]])
+            control_cmd = np.matmul(leftMatrix, rightMatrix)
+            print(control_cmd)
+            cmd = Twist()
+            cmd.linear.x = control_cmd[0][0]
+            cmd.angular.z = control_cmd[1][0]
+            print(cmd)
+            self.pub.publish(cmd)
 
         except (TransformException, LookupException, ConnectivityException, ExtrapolationException):
             self.pub.publish(Twist())
@@ -57,8 +89,9 @@ def main(args=None):
         rclpy.shutdown()
         return
 
-    frame1 = sys.argv[1]
-    frame2 = sys.argv[2]
+    frame1 = sys.argv[1] #turtle bot 
+    frame2 = sys.argv[2] #target tag. origin
+    # trans = tfBuffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
 
     node = TurtleBotController(frame1, frame2)
     try:
