@@ -105,6 +105,13 @@ def skew_3d(omega):
     """
 
     # YOUR CODE HERE
+    wHat = [[0, -omega[2], omega[1]],
+            [omega[2], 0, -omega[0]],
+            [-omega[1], omega[0], 0]]
+    return np.array(wHat)
+
+
+
 
 def rotation_3d(omega, theta):
     """
@@ -117,8 +124,17 @@ def rotation_3d(omega, theta):
     Returns:
     rot - (3,3) ndarray: the resulting rotation matrix
     """
-
     # YOUR CODE HERE
+    I = np.eye(3)
+    wHat = skew_3d(omega)
+    normed = np.linalg.norm(omega)
+
+    a = (wHat / normed) * np.sin(theta * normed) 
+    b = ( np.dot(wHat, wHat) / (normed ** 2)) * (1 - np.cos(theta * normed))
+    # print(I, a, b)
+    return I + a + b
+
+
 
 def hat_3d(xi):
     """
@@ -132,6 +148,14 @@ def hat_3d(xi):
     """
 
     # YOUR CODE HERE
+    twistHate = [[0, -xi[5], xi[4], xi[0]],
+                 [xi[5], 0, -xi[3], xi[1]],
+                 [-xi[4], xi[3], 0, xi[2]],
+                 [0, 0, 0, 0]]
+    return np.array(twistHate)
+
+
+
 
 def homog_3d(xi, theta):
     """
@@ -146,6 +170,31 @@ def homog_3d(xi, theta):
     """
 
     # YOUR CODE HERE
+    v = xi[0:3]
+    w = xi[3:6]
+    if np.linalg.norm(w) == 0:
+        ret = [[1,0,0,v[0]*theta],
+               [0,1,0,v[1]*theta],
+               [0,0,1,v[2]*theta],             
+               [0,0,0,1]]
+        # print(ret)
+        return np.array(ret)
+    else:
+        R = rotation_3d(w, theta)
+        wHat = skew_3d(w)
+        normed = np.linalg.norm(w) ** 2
+        first = np.dot(np.dot((np.eye(3) - R), wHat), v)
+        second = np.dot(np.outer(w, w), v) * theta
+        final = (1/normed) * (first + second)
+        # print(final)
+        right = final.reshape(3,1)
+        ret = [[R[0,0], R[0,1], R[0,2], right[0][0]],
+               [R[1,0], R[1,1], R[1,2], right[1][0]],
+               [R[2,0], R[2,1], R[2,2], right[2][0]],
+               [0,0,0,1]]
+        return np.array(ret)
+        pass
+
 
 
 def prod_exp(xi, theta):
@@ -162,6 +211,14 @@ def prod_exp(xi, theta):
     """
 
     # YOUR CODE HERE
+    nums = xi.shape[1]
+    for i in range(nums):
+        if i == 0:
+            g = homog_3d(xi[:,i], theta[i])
+        else:
+            new = homog_3d(xi[:,i], theta[i])
+            g = np.dot(g, new)
+    return g
 
 #---------------------------------TESTING CODE---------------------------------
 #-------------------------DO NOT MODIFY ANYTHING BELOW HERE--------------------

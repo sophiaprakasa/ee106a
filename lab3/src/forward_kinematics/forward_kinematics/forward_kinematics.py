@@ -2,7 +2,7 @@
 
 import numpy as np
 import scipy as sp
-import kin_func_skeleton as kfs 
+import forward_kinematics.kin_func_skeleton as kfs 
 
 def ur7e_foward_kinematics_from_angles(joint_angles):
     """
@@ -41,6 +41,27 @@ def ur7e_foward_kinematics_from_angles(joint_angles):
                   [0., 1., 0.]])
 
     # YOUR CODE HERE (Task 1)
+    q = np.array([[0.817],
+                  [0.233],
+                  [0.06285]])
+    gst0 = np.block([
+        [R, q],   
+        [0, 0, 0, 1] 
+    ])
+    v0 = np.ndarray((3, 6))
+    for i in range(6):
+        v0[:, i] = np.cross(q0[:, i], w0[:, i])
+    xi = np.ndarray((6, 6))
+    for i in range(6):        
+        xi[:, i] = np.concatenate((v0[:, i], w0[:, i]))
+    # print(xi)
+    # print(joint_angles)
+    return kfs.prod_exp(xi, joint_angles) @ gst0
+
+    
+
+
+    
 
 
 def ur7e_forward_kinematics_from_joint_state(joint_state):
@@ -59,6 +80,11 @@ def ur7e_forward_kinematics_from_joint_state(joint_state):
     
     angles = np.zeros(6)
     # YOUR CODE HERE (Task 2)
-    
-
+    angles[0] = joint_state.position[5]
+    angles[1] = joint_state.position[0]
+    angles[2] = joint_state.position[1]
+    angles[3] = joint_state.position[2]
+    angles[4] = joint_state.position[3]
+    angles[5] = joint_state.position[4]
+    return ur7e_foward_kinematics_from_angles(angles)
     # END YOUR CODE HERE
