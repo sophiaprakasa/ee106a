@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'keyboard_controller = joint_control.keyboard_controller:main',
+            'joint_pos_control = joint_control.joint_pos_control:main'
         ],
     },
 )
