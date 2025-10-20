@@ -5,6 +5,8 @@ from geometry_msgs.msg import TransformStamped
 from tf2_ros import StaticTransformBroadcaster
 
 import numpy as np
+from scipy.spatial.transform import Rotation as rot
+
 
 class ConstantTransformPublisher(Node):
     def __init__(self):
@@ -25,6 +27,22 @@ class ConstantTransformPublisher(Node):
         # TODO: Fill out TransformStamped message
         # --------------------------
 
+        rotation = G[:3, :3]
+        translation = G[:3, 3]
+        quaternion = rot.from_matrix(rotation).as_quat()
+        self.transform = TransformStamped()
+
+        self.transform.header.frame_id = 'ar_marker_10'       
+        self.transform.child_frame_id = 'base_link'          
+
+        self.transform.transform.translation.x = translation[0]
+        self.transform.transform.translation.y = translation[1]
+        self.transform.transform.translation.z = translation[2]
+
+        self.transform.transform.rotation.x = quaternion[0]
+        self.transform.transform.rotation.y = quaternion[1]
+        self.transform.transform.rotation.z = quaternion[2]
+        self.transform.transform.rotation.w = quaternion[3]
 
         self.timer = self.create_timer(0.05, self.broadcast_tf)
 

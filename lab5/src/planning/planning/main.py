@@ -4,6 +4,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import PointStamped 
 from tf2_ros import Buffer, TransformListener
 import numpy as np
+import tf2_geometry_msgs
 
 class UR7e_CubeGrasp(Node):
     def __init__(self):
@@ -13,15 +14,16 @@ class UR7e_CubeGrasp(Node):
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
-
+        self.pub = self.create_publisher(PointStamped, '/cube_pose_base_link', 10)
         rclpy.spin_once(self, timeout_sec=2)
 
         self.cube_pose = None
 
     def cube_callback(self, cube_pose):
-        if self.cube_pose is None:
-            self.cube_pose = self.transform_cube_pose(cube_pose)
-            self.get_logger().info('Received cube pose')
+        self.cube_pose = self.transform_cube_pose(cube_pose)
+        self.get_logger().info('Received cube pose')
+        self.pub.publish(self.cube_pose)
+
 
     def transform_cube_pose(self, msg: PointStamped):
         """ 
@@ -35,8 +37,14 @@ class UR7e_CubeGrasp(Node):
         # ------------------------
         #TODO: Add your code here!
         # ------------------------
+        transform = self.tf_buffer.lookup_transform(
+            'base_link', msg.header.frame_id, rclpy.time.Time(),
+            rclpy.duration.Duration(seconds=1.0)
+        )
+        point = tf2_geometry_msgs.do_transform_point(msg, transform)
+        point.header.frame_id = 'base_link'
 
-        return
+        return point
 
 def main(args=None):
     rclpy.init(args=args)
