@@ -64,6 +64,14 @@ def generate_launch_description():
         }]
     )
 
+    # Transform cube pose from camera frame to base_link
+    transform_cube_pose_node = Node(
+        package='planning',
+        executable='transform_cube_pose',
+        name='transform_cube_pose',
+        output='screen'
+    )
+
     # ArUco recognition
     aruco_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -77,7 +85,7 @@ def generate_launch_description():
 
     ar_marker_launch_arg = DeclareLaunchArgument(
         'ar_marker',
-        default_value='ar_marker_7'
+        default_value='ar_marker_10'
     )
     ar_marker = LaunchConfiguration('ar_marker')
 
@@ -91,6 +99,8 @@ def generate_launch_description():
             'ar_marker': ar_marker,
         }]
     )
+
+
 
     # Static TF: base_link -> world
     # -------------------------------------------------
@@ -125,14 +135,6 @@ def generate_launch_description():
         }.items(),
     )
 
-    # -------------------------
-    # Global shutdown on any process exit
-    # -------------------------
-    shutdown_on_any_exit = RegisterEventHandler(
-        OnProcessExit(
-            on_exit=[EmitEvent(event=Shutdown(reason='SOMETHING BONKED'))]
-        )
-    )
     
     return LaunchDescription([
         ar_marker_launch_arg,
@@ -143,8 +145,9 @@ def generate_launch_description():
         realsense_launch,
         aruco_launch,
         perception_node,
+        transform_cube_pose_node,
         planning_tf_node,
+        # main_node,
         static_base_world,
         moveit_launch,
-        shutdown_on_any_exit
     ])

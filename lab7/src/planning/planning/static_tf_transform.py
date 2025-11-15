@@ -11,7 +11,7 @@ class ConstantTransformPublisher(Node):
         super().__init__('constant_tf_publisher')
         self.br = StaticTransformBroadcaster(self)
 
-        self.declare_parameter('ar_marker', 'ar_marker_7')
+        self.declare_parameter('ar_marker', 'ar_marker_10')
         marker = self.get_parameter('ar_marker').get_parameter_value().string_value
 
         # Homogeneous transform G_ar->base_link
@@ -27,7 +27,20 @@ class ConstantTransformPublisher(Node):
         # ---------------------------
         # TODO: Fill out TransformStamped message
         # --------------------------
-        # Extract rotation (3x3) and translation (3x1)
+        rotation_matrix = G[:3, :3]
+        translation = G[:3, 3]
+        
+        rot = R.from_matrix(rotation_matrix)
+        quaternion = rot.as_quat()  
+        self.transform.header.frame_id = marker
+        self.transform.child_frame_id = 'base_link'
+        self.transform.transform.translation.x = translation[0]
+        self.transform.transform.translation.y = translation[1]
+        self.transform.transform.translation.z = translation[2]
+        self.transform.transform.rotation.x = quaternion[0]
+        self.transform.transform.rotation.y = quaternion[1]
+        self.transform.transform.rotation.z = quaternion[2]
+        self.transform.transform.rotation.w = quaternion[3]
 
         self.timer = self.create_timer(0.05, self.broadcast_tf)
 

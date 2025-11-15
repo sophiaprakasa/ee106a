@@ -1,7 +1,8 @@
 import rclpy
 from rclpy.node import Node
 from tf2_ros import Buffer, TransformListener
-from geometry_msgs.msg import PointStamped 
+from geometry_msgs.msg import PointStamped
+from tf2_geometry_msgs import do_transform_point 
 
 class TransformCubePose(Node):
     def __init__(self):
@@ -17,14 +18,17 @@ class TransformCubePose(Node):
             10
         )
 
-        self.cube_pose_pub = ... # Please ensure this is filled
+        self.cube_pose_pub = self.create_publisher(PointStamped, '/cube_pose_in_base', 10)
 
         rclpy.spin_once(self, timeout_sec=2)
         self.cube_pose = None
 
     def cube_pose_callback(self, msg: PointStamped):
-        if self.cube_pose is None:
-            self.cube_pose = self.transform_cube_pose(msg)
+
+        transformed_pose = self.transform_cube_pose(msg)
+        if transformed_pose is not None:
+            self.cube_pose = transformed_pose
+            self.cube_pose_pub.publish(transformed_pose)
 
     def transform_cube_pose(self, msg: PointStamped):
         """ 
@@ -32,10 +36,22 @@ class TransformCubePose(Node):
         Args: 
             - msg: PointStamped - The message from /cube_pose, of the position of the cube in camera_depth_optical_frame
         Returns:
-            Point: point in base_link_frame in form [x, y, z]
+            PointStamped: point in base_link_frame
         """
-
-        return
+        try:
+            transform = self.tf_buffer.lookup_transform(
+                'base_link',
+                msg.header.frame_id,
+                rclpy.time.Time(),
+                timeout=rclpy.duration.Duration(seconds=1.0)
+            )
+            # self.get_logger.info(f"Transform:{transform}")
+            transformed_point = do_transform_point(msg, transform)
+            
+            return transformed_point
+        except Exception as e:
+            self.get_logger().error(f'Failed to transform cube pose: {e}')
+            return None
 
 def main(args=None):
     rclpy.init(args=args)

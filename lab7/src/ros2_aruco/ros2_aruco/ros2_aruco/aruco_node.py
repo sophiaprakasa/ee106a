@@ -297,8 +297,8 @@ class ArucoNode(rclpy.node.Node):
                 transform.header.stamp = img_msg.header.stamp
                 if self.camera_frame == "":
                     # Note the info_msg header is better practice just testing this
-                    # transform.header.frame_id = self.info_msg.header.frame_id
-                    transform.header.frame_id = "camera1"
+                    transform.header.frame_id = self.info_msg.header.frame_id
+                    # transform.header.frame_id = "camera1"
                 else:
                     transform.header.frame_id = self.camera_frame
                 transform.child_frame_id = f"ar_marker_{marker_id[0]}"
